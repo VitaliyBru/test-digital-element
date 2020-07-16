@@ -1,1 +1,1 @@
-export default () => console.log(`сборка работает`);
+export default () => console.log(`js работает`);

@@ -2,11 +2,213 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <title>Главная</title>
-  <link href="css/style.min.css" rel="stylesheet">
+  <link rel="preload" href="fonts/OpenSans-Bold.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+  <link rel="preload" href="fonts/Roboto-Bold.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+  <link rel="preload" href="fonts/Roboto-Regular.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+  <link rel="stylesheet" href="css/style.min.css">
 </head>
 <body>
+  <header class="header">
+    <div class="header__box">
+      <a href="#" class="header__home">
+        <svg class="header__logo" xmlns="http://www.w3.org/2000/svg">
+          <use href="img/svg/sprite.svg#logo-header"></use>
+        </svg>
+      </a>
+      <div class="header__menu">
+        <button type="button" class="header__btn-menu">
+          <span class="visually-hidden">Открыть меню</span>
+        </button>
+      </div>
+    </div>
+  </header>
+  <section class="hero">
+    <img class="hero__bg" src="img/bg-hero.svg" width="688" alt="">
+    <div class="container  hero__container">
+      <h2 class="hero__heading">New Automation Tool for Your Home</h2>
+      <p class="hero__text">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+        Faucibus tristique vulputate ultrices ut mauris tellus at.
+        Posuere sollicitudin odio tellus elit.
+      </p>
+      <a href="#" class="hero__button">See Our Project</a>
+    </div>
+  </section>
+  <section class="service">
+    <div class="container  clear-fix">
+      <h2 class="service__heading">What we do to help our client grow in digital era,</h2>
+      <div class="service__card  service__card--right">
+        <img class="service__decoration  service__decoration--home" src="img/service-home.svg">
+        <h3 class="service__title-card">Bring Technology To Your Comfrotable Home</h3>
+        <p class="service__resume">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
+          ut labore et dolore magna aliqua.
+        </p>
+        <a class="service__link" href="#">Learn more</a>
+      </div>
+      <div class="service__card  service__card--left">
+        <img class="service__decoration" src="img/service-internet.svg">
+        <h3 class="service__title-card">Make Your business To Be Better Famous In Internet</h3>
+        <p class="service__resume">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
+          ut labore et dolore magna aliqua.
+        </p>
+        <a class="service__link" href="#">Learn more</a>
+      </div>
+      <div class="service__card  service__card--right">
+        <img class="service__decoration" src="img/service-develop.svg">
+        <h3 class="service__title-card">Build Your Digital Product That Suitable For Your Need</h3>
+        <p class="service__resume">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
+          ut labore et dolore magna aliqua.
+        </p>
+        <a class="service__link" href="#">Learn more</a>
+      </div>
+    </div>
+  </section>
+  <section class="clientele">
+    <div class="container">
+      <div class="clientele__top-block">
+        <h2 class="clientele__heading">Our Beloved Client</h2>
+        <p class="clientele__text">
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt
+          ut labore et dolore magna aliqua. Ut enim ad minim veniam.
+        </p>
+      </div>
+      <div class="clientele__bottom-block">
+        <ul class="clientele__list">
+          <li class="clientele__item">
+            <span class="clientele__logo-text  clientele__logo-text--holder">Logo client 1</span>
+          </li>
+          <li class="clientele__item">
+            <span class="clientele__logo-text  clientele__logo-text--holder">Logo client 2</span>
+          </li>
+          <li class="clientele__item">
+            <span class="clientele__logo-text  clientele__logo-text--holder">Logo client 3</span>
+          </li>
+          <li class="clientele__item">
+            <span class="clientele__logo-text  clientele__logo-text--holder">Logo client 4</span>
+          </li>
+          <li class="clientele__item">
+            <span class="clientele__logo-text  clientele__logo-text--holder">Logo client 5</span>
+          </li>
+          <li class="clientele__item">
+            <span class="clientele__logo-text  clientele__logo-text--holder">Logo client 6</span>
+          </li>
+          <li class="clientele__item">
+            <span class="clientele__logo-text  clientele__logo-text--holder">Logo client 7</span>
+          </li>
+          <li class="clientele__item">
+            <a class="clientele__link" href="#">
+              <span class="clientele__logo-text">More Client</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </section>
+  <footer class="footer">
+    <div class="footer__bg-decor"></div>
+    <div class="footer__container  footer__container--top">
+      <div class="footer__top-left">
+        <h2 class="footer__heading">Intersted to woek with our team?</h2>
+        <p class="footer__text">
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt
+          ut labore et dolore magna aliqua. Ut enim ad minim veniam.
+        </p>
+      </div>
+      <button class="footer__button  js-feedback-open" type="button">Let’s Talk</button>
+    </div>
+    <div class="footer__container">
+      <div class="column-1  footer__column  footer__column--col-1">
+        <svg class="column-1__logo" xmlns="http://www.w3.org/2000/svg">
+          <use href="img/svg/sprite.svg#logo-footer"></use>
+        </svg>
+        <div class="column-1__heading">Afrianska</div>
+        <ul class="column-1__list">
+          <li class="column-1__item">
+            <span class="column-1__liter">A.</span>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+          </li>
+          <li class="column-1__item">
+            <span class="column-1__liter">T.</span>
+            <a class="footer__link" href="tel:+62-812-7313-4321">+62-812-7313-4321</a>
+          </li>
+          <li class="column-1__item">
+            <span class="column-1__liter">E</span>
+            <a class="footer__link" href="mailto:hello.afrian@gmail.com">hello.afrian@gmail.com</a>
+          </li>
+        </ul>
+      </div>
+      <div class="column-2  footer__column  footer__column--col-2">
+        <div class="column-2__heading">About US</div>
+        <ul class="column-2__list">
+          <li class="column-2__item">
+            <a class="footer__link" href="#">About</a>
+          </li>
+          <li class="column-2__item">
+            <a class="footer__link" href="#">What We Do</a>
+          </li>
+          <li class="column-2__item">
+            <a class="footer__link" href="#">Project</a>
+          </li>
+          <li class="column-2__item">
+            <a class="footer__link" href="#">How It Work With Us</a>
+          </li>
+        </ul>
+      </div>
+      <div class="column-3  footer__column  footer__column--col-3">
+        <div class="column-2__heading">Follow US</div>
+        <ul class="column-2__list">
+          <li class="column-2__item">
+            <a class="footer__link" href="#">Instagram</a>
+          </li>
+          <li class="column-2__item">
+            <a class="footer__link" href="#">Facebook</a>
+          </li>
+          <li class="column-2__item">
+            <a class="footer__link" href="#">LinkedIn</a>
+          </li>
+          <li class="column-2__item">
+            <a class="footer__link" href="#">Youtube</a>
+          </li>
+        </ul>
+      </div>
+      <div class="footer__copyright">2019 © Afrianska. All rights reserved.</div>
+    </div>
+  </footer>
+  <section class="popup  js-feedback-overlay">
+    <div class="popup__wrapper">
+      <button class="popup__close  js-feedback-close" type="button">
+        <span class="visually-hidden">Закрыть всплывающее окно</span>
+      </button>
+      <div class="popup__blank">
+        <h2 class="popup__heading">Send us message</h2>
+        <form class="popup__form" action="test.json" name="feedback" method="post">
+          <label>
+            Full Name
+            <input type="text" name="userName" placeholder="Your Name" required="">
+          </label>
+          <label>
+            Email
+            <input type="email" name="userEmail" placeholder="Your Email" required="">
+          </label>
+          <label>
+            Message
+            <textarea name="userMessage" placeholder="Your Message" required=""></textarea>
+          </label>
+          <button type="submit">Submit</button>
+        </form>
+      </div>
+    </div>
+    <div class="popup__success">
+      <span class="popup__thanks">Thank you!</span>
+      <button type="button" class="popup__ok  js-feedback-success">Ok</button>
+    </div>
+  </section>
   <script src="js/app.bundle.js"></script>
 </body>
 </html>

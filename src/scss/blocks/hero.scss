@@ -1,0 +1,93 @@
+.hero {
+  position: relative;
+  padding: 87px 0 140px;
+  min-height: 676px;
+  background-color: $white;
+  background-image: linear-gradient(to top, rgba($blueLight, 0.2) 28%, rgba(152, 195, 232, 0) 100%);
+  overflow: hidden;
+
+  .safari & {
+    padding-top: 90px;
+  }
+
+  @include tablet {
+    padding: 87px 0 80px;
+    min-height: 640px;
+  }
+
+  @include mobile {
+    padding: 130px 0 80px;
+    min-height: 575px;
+  }
+}
+
+.hero__bg {
+  position: absolute;
+  top: 45.7%;
+  left: 47.9%;
+  width: 688px / $desktopMax * 100%;
+  max-width: 688px;
+  transform: translateY(-50%);
+
+  @include tablet {
+    top: 38%;
+  }
+
+  @include mobile {
+    top: 0;
+    transform: none;
+  }
+}
+
+.hero__container {
+  position: relative;
+  z-index: 10;
+}
+
+.hero__heading {
+  margin: 0 0 42px;
+  padding: 0 210px 0 0;
+  width: 100%;
+  color: $blueDark;
+
+  @include fontGalien(64px, 74px, 6.1px);
+
+  @include tablet {
+    padding: 0 150px 0 0;
+    font-size: 48px;
+  }
+
+  @include mobile {
+    padding: 0;
+    width: 300px;
+    font-size: 36px;
+  }
+}
+
+.hero__text {
+  margin: 0 0 50px;
+  padding: 0 520px 0 0;
+  color: rgba($blueDark, 0.6);
+
+  @include fontGilroy(16px, 26px, 1.7px);
+
+  @include tablet {
+    padding: 0 400px 0 0;
+  }
+
+  @include mobile {
+    padding: 0;
+  }
+}
+
+.hero__button {
+  @include button(56px);
+
+  min-width: 220px;
+  box-shadow: 5px 10px 20px rgba($blue, 0.2);
+  text-decoration: none;
+
+  .safari & {
+    margin-top: -3px;
+  }
+}

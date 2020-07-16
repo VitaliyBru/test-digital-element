@@ -1,0 +1,38 @@
+.header {
+  padding: 40px 0 0;
+  background-color: $white;
+}
+
+.header__box {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 auto;
+  width: 1196px / $desktopMax * 100%;
+  max-width: 1196px;
+}
+
+.header__home {
+  display: block;
+  margin: 8px 0;
+  text-decoration: none;
+
+  @include interaction();
+}
+
+.header__logo {
+  width: 48px;
+  height: 32px;
+}
+
+.header__btn-menu {
+  display: block;
+  width: 24px;
+  height: 16px;
+  border: none;
+  background: linear-gradient(to top, $blue 2px, $white 2px, $white 7px) left bottom / 100% 7px repeat-y;
+  cursor: pointer;
+  outline: none;
+
+  @include interaction();
+}

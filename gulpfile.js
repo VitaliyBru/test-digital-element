@@ -68,7 +68,7 @@ gulp.task(`webp`, () => {
 });
 
 gulp.task(`sprite`, () => {
-  return gulp.src(`src/img/**/*.svg`)
+  return gulp.src(`src/img/svg/*.svg`)
     .pipe(svgstore({
       inlineSvg: true
     }))
@@ -89,7 +89,8 @@ gulp.task(`clean`, () => del(`build`));
 gulp.task(`copy`, () => {
   return gulp.src([
     `src/fonts/**/*.{woff,woff2}`,
-    `src/img/**`
+    `src/img/*.*`,
+    `src/*.json`
   ], {
     base: `src`
   })

@@ -1,1 +1,13 @@
-
+@import "global/normalize";
+@import "global/variables";
+@import "global/mixins";
+@import "global/fonts";
+@import "global/global";
+@import "blocks/header";
+@import "blocks/hero";
+@import "blocks/service";
+@import "blocks/clientele";
+@import "blocks/footer";
+@import "blocks/column-1";
+@import "blocks/column-2";
+@import "blocks/popup";

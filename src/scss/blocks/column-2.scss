@@ -1,0 +1,18 @@
+.column-2__heading {
+  @include fontGilroySemi(20px, 30px, 4px);
+
+  color: $white;
+}
+
+.column-2__list {
+  @include list-reset;
+
+  margin: 32px 0 0;
+}
+
+.column-2__item {
+  @include fontGilroySemi(16px, 26px, 1.7px);
+
+  margin: 0 0 16px;
+  color: $white;
+}

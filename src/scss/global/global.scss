@@ -1,0 +1,67 @@
+html {
+  background-color: $white;
+  box-sizing: border-box;
+}
+
+body {
+  @include fontGilroy(16px);
+  background-color: $white;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+  font-family: inherit;
+}
+
+main {
+  display: block;
+}
+
+.visually-hidden {
+  position: absolute;
+
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+
+  white-space: nowrap;
+
+  border: 0;
+  clip-path: inset(100%);
+}
+
+.container {
+  margin: 0 auto;
+  width: $desktopContent;
+
+  @include tablet {
+    width: $tabletContent;
+  }
+
+  @include mobile {
+    margin: 0 4%;
+    width: auto;
+  }
+}
+
+.clear-fix {
+  &:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+}
+
+.js-feedback {
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  width: 100vw;
+  height: 100vh;
+}

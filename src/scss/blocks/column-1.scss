@@ -1,0 +1,37 @@
+.column-1__logo {
+  margin: 11px 0 0;
+  width: 48px;
+  height: 32px;
+  float: left;
+
+  .safari & {
+    margin-top: 8px;
+  }
+}
+
+.column-1__heading {
+  @include fontGilroySemi(28px, 46px, 4.3px);
+
+  padding: 0 0 0 64px;
+  color: $white;
+}
+
+.column-1__list {
+  @include list-reset;
+
+  margin: 36px 0 0;
+}
+
+.column-1__item {
+  @include fontGilroy(16px, 26px, 1.8px);
+
+  position: relative;
+  margin: 0 0 22px;
+  padding: 0 0 0 36px;
+  color: $white;
+}
+
+.column-1__liter {
+  position: absolute;
+  left: 0;
+}

@@ -1,0 +1,98 @@
+@mixin tablet {
+  @media (max-width: $tabletMax) {
+    @content;
+  }
+}
+
+@mixin mobile {
+  @media (max-width: $mobileMax) {
+    @content;
+  }
+}
+
+@mixin _font($font-family, $font-size, $font-weight, $line-height, $letter-spacing) {
+  font-family: $font-family, Arial, sans-serif;
+  font-size: $font-size;
+  font-weight: $font-weight;
+
+  @if $letter-spacing {
+    letter-spacing: $letter-spacing / $font-size + em;
+  }
+
+  @if $line-height {
+    line-height: $line-height / $font-size + em;
+  } @else {
+    line-height: 1.15em;
+  }
+}
+
+@mixin fontGalien($font-size, $line-height: false, $letter-spacing: false) {
+  @include _font("Galien", $font-size, $galienWeight, $line-height, $letter-spacing);
+}
+
+@mixin fontGilroy($font-size, $line-height: false, $letter-spacing: false) {
+  @include _font("Gilroy", $font-size, $gilroyWeight, $line-height, $letter-spacing);
+}
+
+@mixin fontGilroySemi($font-size, $line-height: false, $letter-spacing: false) {
+  @include _font("Gilroy", $font-size, $gilroySemiWeight, $line-height, $letter-spacing);
+}
+
+@mixin interaction($hoverColor: false, $activeColor: false) {
+  @if $hoverColor or $activeColor {
+    transition: background-color;
+  }
+  @if $hoverColor == false or $activeColor == false {
+    transition: opacity;
+  }
+  transition-duration: 200ms;
+  &:hover {
+    @if $hoverColor {
+      background-color: $hoverColor;
+    } @else {
+      opacity: 0.8;
+    }
+  }
+
+  &:active {
+    @if $activeColor {
+      background-color: $activeColor;
+    } @else {
+      opacity: 0.6;
+    }
+  }
+}
+
+@mixin button($height, $letterSpacing: 1.6px, $fontSize: 16px, $lineHeight: 26px) {
+  @include fontGilroy($fontSize, $lineHeight, $letterSpacing);
+
+  display: inline-block;
+  padding: {
+    top: ($height - $lineHeight) / 2;
+    left: 20px;
+    bottom: ($height - $lineHeight) / 2;
+    right: 20px;
+  };
+  color: $white;
+  background-color: $blueLight;
+  border-radius: 10px;
+  text-align: center;
+  cursor: pointer;
+
+  .safari & {
+    padding: {
+      top: ($height - $lineHeight) / 2 + 4px;
+      left: 20px;
+      bottom: ($height - $lineHeight) / 2 - 4px;
+      right: 20px;
+    };
+  }
+
+  @include interaction();
+}
+
+@mixin list-reset {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
